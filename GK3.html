@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK3 - Grupo Oficial</title>
+    <style>
+        
+        body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ad95ff;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+
+        .home {
+            background-image: url('images/background.jpg'); /* Asegúrate de tener una imagen de fondo adecuada */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .home .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .home h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .home .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ad95ff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .home .btn:hover {
+            background-color: #ad95ff;
+        }
+
+        .about, .members, .contact {
+            background-color: #1a1a1a;
+            margin: 20px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s forwards;
+        }
+
+        .about {
+            animation-delay: 0.5s;
+        }
+
+        .members {
+            animation-delay: 1s;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact {
+            animation-delay: 1.5s;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .member {
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .member img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .member h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .member p {
+            margin-top: 5px;
+            font-size: 1em;
+            color: #ad95ff;
+        }
+
+        .member:hover {
+            transform: scale(1.05);
+        }
+
+        .member:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer .socials {
+            margin: 10px 0;
+        }
+
+        footer .socials a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        footer .socials a:hover {
+            color: #ad95ff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>GK3</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Gallery</a></li>
+                <li><a href="#members">Music</a></li>
+                <li><a href="#contact">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="overlay">
+            <h2>Bienvenidos al sitio oficial de GK3</h2>
+            <p>El grupo que redefine la música y el baile.</p>
+            <a href="#about" class="btn">Descubre Más</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>GK3 es un grupo innovador que combina voces potentes, movimientos de baile impresionantes y raps inolvidables. Somos Daniela, Jeca y Kevin, y juntos formamos GK3.</p>
+    </section>
+
+    <section id="members" class="members">
+        <h2>Integrantes</h2>
+        <div class="member-grid">
+            <div class="member">
+                <img src="images/daniela.jpg" alt="Daniela">
+                <h3>Daniela</h3>
+                <p>Voz Principal</p>
+            </div>
+            <div class="member">
+                <img src="images/jeca.jpg" alt="Jeca">
+                <h3>Jeca</h3>
+                <p>Bailarina Principal</p>
+            </div>
+            <div class="member">
+                <img src="images/kevin.jpg" alt="Kevin">
+                <h3>Kevin</h3>
+                <p>Rapero Principal</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <p>Para consultas y colaboraciones, escríbenos a: <a href="mailto:contacto@gk3.com">contacto@gk3.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GK3. Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="Gk31.js"></script>
+</body>
+</html>
